@@ -5,13 +5,14 @@ import { Image } from "../styles/image.style.js";
 import { Button, ButtonWithHover } from "../styles/button.style";
 import { Heading, Text } from "../styles/text.style";
 import logo from "../images/logo.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import { FaSearch, FaCartPlus } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { Default, Desktop, Tablet, Mobile } from "../responsive/responsive";
 import DesktopNavigationBar from "../responsive/DesktopNavigationBar";
 import TabletNavigationBar from "../responsive/TabletNavigationBar";
 import MobileNavigationBar from "../responsive/MobileNavigationBar";
+import "../App.css";
 
 function NavigationBar() {
   //hooks write here
@@ -70,12 +71,26 @@ function NavigationBar() {
                 </form>
               </FlexBox>
               <FlexBox w="20vw" fjc="space-around">
-                <NavLink to="/collection" style={{ textDecoration: "none" }}>
+                <Link
+                  to="/collection"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
+                >
                   Collection
-                </NavLink>
-                <NavLink to="/new-arrival" style={{ textDecoration: "none" }}>
+                </Link>
+                <Link
+                  to="/new-arrival"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                    fontWeight: "bold",
+                  }}
+                >
                   New Arrival
-                </NavLink>
+                </Link>
               </FlexBox>
               <FlexBox w="10vw" fjc="space-between">
                 <FlexBox>

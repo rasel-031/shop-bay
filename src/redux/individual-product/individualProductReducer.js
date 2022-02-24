@@ -5,7 +5,7 @@ import {
 } from "./individualProductActionType";
 
 const initialize = {
-  loading: false,
+  loading: true,
   payload: {},
   error: "",
 };
